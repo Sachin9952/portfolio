@@ -254,6 +254,7 @@ export type Project = {
   content: React.ReactNode | any;
   github?: string;
   live: string;
+  thumbnailPosition?: string;
 };
 const projects: Project[] = [
   {
@@ -283,7 +284,7 @@ const projects: Project[] = [
       ],
     },
     live: "https://around-you-ten.vercel.app",
-    github: "https://github.com/sachinsinghakhawat/around-you",
+    github: "https://github.com/Sachin9952/around-you",
     get content() {
       return (
         <div>
@@ -329,6 +330,53 @@ const projects: Project[] = [
             Real-time chat system between users and providers
           </p>
           <SlideShow images={[`${BASE_PATH}/around-you/around-you-chat.png`]} />
+        </div>
+      );
+    },
+  },
+  {
+    id: "velvet-pour",
+    category: "Animated Frontend Landing Page",
+    title: "Velvet Pour",
+    src: "/assets/projects-screenshots/velvet-pour/velvet-pour-landing.png",
+    screenshots: ["velvet-pour-landing.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.vite,
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.gsap,
+      ],
+      backend: [],
+    },
+    live: "https://gsap-cocktails-sand.vercel.app",
+    github: "https://github.com/Sachin9952/gsap-cocktails",
+    thumbnailPosition: "top",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            A visually stunning cocktail bar landing page featuring smooth
+            GSAP-powered animations.
+          </TypographyP>
+          <TypographyP className="font-mono ">
+            Velvet Pour is a premium frontend landing page built for a cocktail
+            bar concept. It showcases advanced GSAP animations including scroll-
+            triggered transitions, text reveals, and interactive UI elements.
+            The site features a curated menu of cocktails and mocktails, elegant
+            typography, and a dark luxurious aesthetic — all designed to deliver
+            a memorable first impression.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+
+          <TypographyH3 className="my-4 mt-8">Landing Page</TypographyH3>
+          <p className="font-mono mb-2">
+            Immersive hero section with GSAP-animated cocktail visuals
+          </p>
+          <SlideShow
+            images={[`${BASE_PATH}/velvet-pour/velvet-pour-landing.png`]}
+          />
         </div>
       );
     },

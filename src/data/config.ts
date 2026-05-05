@@ -27,7 +27,7 @@ const config = {
   site: "https://sachinsinghakhawat.com",
 
   // for github stars button
-  githubUsername: "sachin-singh-akhawat",
+  githubUsername: "Sachin9952",
   githubRepo: "3d-portfolio",
 
   get ogImg() {
@@ -36,9 +36,9 @@ const config = {
   social: {
     twitter: "https://x.com/sachin_akhawat",
     linkedin: "https://www.linkedin.com/in/sachinsinghakhawat/",
-    instagram: "https://www.instagram.com/sachin_akhawat",
+    instagram: "https://instagram.com/Sachin_singh_akhawat",
     facebook: "https://www.facebook.com/sachinsinghakhawat",
-    github: "https://github.com/sachinsinghakhawat",
+    github: "https://github.com/Sachin9952",
   },
 };
 export { config };
