@@ -73,7 +73,7 @@ export const SKILLS: Record<SkillNames, Skill> = {
     label: "Tailwind CSS",
     shortDescription: "Responsive UI styling",
     color: "#38bdf8",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    icon: "https://cdn.simpleicons.org/tailwindcss/38bdf8",
   },
   [SkillNames.NODEJS]: {
     id: 9,
@@ -89,7 +89,7 @@ export const SKILLS: Record<SkillNames, Skill> = {
     label: "Express.js",
     shortDescription: "API building",
     color: "#fff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    icon: "https://cdn.simpleicons.org/express/ffffff",
   },
   [SkillNames.MONGODB]: {
     id: 12,
@@ -113,7 +113,7 @@ export const SKILLS: Record<SkillNames, Skill> = {
     label: "Cloudinary",
     shortDescription: "Media handling",
     color: "#3448c5",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudinary/cloudinary-original.svg",
+    icon: "https://cdn.simpleicons.org/cloudinary/3448c5",
   },
   [SkillNames.REST_API]: {
     id: 15,
@@ -129,7 +129,7 @@ export const SKILLS: Record<SkillNames, Skill> = {
     label: "Socket.IO",
     shortDescription: "Real-time features",
     color: "#fff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
+    icon: "https://cdn.simpleicons.org/socketdotio/ffffff",
   },
   [SkillNames.GIT]: {
     id: 17,
@@ -153,7 +153,7 @@ export const SKILLS: Record<SkillNames, Skill> = {
     label: "Render",
     shortDescription: "Backend hosting",
     color: "#fff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/render/render-original.svg",
+    icon: "https://cdn.simpleicons.org/render/ffffff",
   },
   [SkillNames.VSCODE]: {
     id: 20,

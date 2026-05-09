@@ -15,6 +15,7 @@ import {
   useTransform,
 } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { LayoutGrid } from "lucide-react";
 
 export const FloatingDock = ({
   items,
@@ -27,7 +28,8 @@ export const FloatingDock = ({
 }) => {
   return (
     <>
-      <FloatingDockDesktop items={items} className={desktopClassName} />
+      <FloatingDockDesktop items={items} className={cn("hidden md:flex", desktopClassName)} />
+      <FloatingDockMobile items={items} className={cn("block md:hidden", mobileClassName)} />
     </>
   );
 };
@@ -76,6 +78,12 @@ const FloatingDockMobile = ({
           </motion.div>
         )}
       </AnimatePresence>
+      <button
+        onClick={() => setOpen(!open)}
+        className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center"
+      >
+        <LayoutGrid className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+      </button>
     </div>
   );
 };
