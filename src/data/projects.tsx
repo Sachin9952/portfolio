@@ -261,12 +261,12 @@ const projects: Project[] = [
     id: "around-you",
     category: "Local Service Finder Platform",
     title: "Around-You",
-    src: "/assets/projects-screenshots/around-you/around-you-landing.png",
+    src: "/assets/projects-screenshots/around-you/around-you-landing-v2.png",
     screenshots: [
-      "around-you-landing.png",
-      "around-you-services.png",
-      "around-you-provider.png",
-      "around-you-chat.png",
+      "around-you-landing-v2.png",
+      "around-you-services-v2.png",
+      "around-you-provider-v2.png",
+      "around-you-chat-v2.png",
     ],
     skills: {
       frontend: [
@@ -288,7 +288,7 @@ const projects: Project[] = [
     get content() {
       return (
         <div>
-          <TypographyP className="font-mono text-2xl text-center">
+          <TypographyP className="font-mono text-xl md:text-2xl text-center">
             A real-world service discovery platform that connects users with
             trusted local service providers.
           </TypographyP>
@@ -307,14 +307,14 @@ const projects: Project[] = [
           <p className="font-mono mb-2">
             Clean landing page with service booking CTA
           </p>
-          <SlideShow images={[`${BASE_PATH}/around-you/around-you-landing.png`]} />
+          <SlideShow images={[`${BASE_PATH}/around-you/around-you-landing-v2.png`]} />
 
           <TypographyH3 className="my-4 mt-8">Services</TypographyH3>
           <p className="font-mono mb-2">
             Service discovery with filters and categories
           </p>
           <SlideShow
-            images={[`${BASE_PATH}/around-you/around-you-services.png`]}
+            images={[`${BASE_PATH}/around-you/around-you-services-v2.png`]}
           />
 
           <TypographyH3 className="my-4 mt-8">Provider</TypographyH3>
@@ -322,14 +322,14 @@ const projects: Project[] = [
             Provider onboarding and service listing flow
           </p>
           <SlideShow
-            images={[`${BASE_PATH}/around-you/around-you-provider.png`]}
+            images={[`${BASE_PATH}/around-you/around-you-provider-v2.png`]}
           />
 
           <TypographyH3 className="my-4 mt-8">Chat</TypographyH3>
           <p className="font-mono mb-2">
             Real-time chat system between users and providers
           </p>
-          <SlideShow images={[`${BASE_PATH}/around-you/around-you-chat.png`]} />
+          <SlideShow images={[`${BASE_PATH}/around-you/around-you-chat-v2.png`]} />
         </div>
       );
     },

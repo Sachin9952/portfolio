@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects - Sachin Singh Akhawat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-utilities">
+        body {
+            background-color: #030712;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(29, 78, 216, 0.07) 0%, transparent 50%),
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .glass-panel-2 {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+        }
+
+        .neon-border-teal {
+            border: 1px solid rgba(20, 184, 166, 0.15);
+        }
+
+        .neon-border-purple {
+            border: 1px solid rgba(168, 85, 247, 0.15);
+        }
+
+        .card-glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.03), transparent 70%);
+            pointer-events: none;
+        }
+
+        .project-heading {
+            letter-spacing: -0.02em;
+        }
+
+        @keyframes subtle-zoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        .group:hover .zoom-img {
+            animation: subtle-zoom 10s ease-out forwards;
+        }
+
+        .tech-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+<!-- BEGIN: Header -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-panel-2 px-4 py-3 flex justify-between items-center" data-purpose="main-header">
+<div class="font-bold text-sm tracking-tight">Sachin Singh Akhawat</div>
+<div class="flex items-center gap-3">
+<a class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-colors text-[11px] font-semibold" href="#">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+<span>0</span>
+<svg class="w-3 h-3 text-yellow-500 fill-current" viewbox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+</a>
+<button aria-label="Menu" class="p-1 focus:outline-none">
+<svg class="w-6 h-6 stroke-current" fill="none" viewbox="0 0 24 24"><path d="M4 8h16M4 16h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</button>
+</div>
+</header>
+<!-- END: Header -->
+<main class="pt-24 pb-24 px-5 max-w-[430px] mx-auto" data-purpose="main-layout">
+<!-- Hero Section -->
+<section class="mb-12 text-center relative" data-purpose="section-title">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-48 h-48 bg-blue-600/10 blur-[80px] -z-10 rounded-full"></div>
+<h1 class="text-5xl font-black tracking-tighter mb-3 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">PROJECTS</h1>
+<p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Selected Works • 2024</p>
+</section>
+<!-- BEGIN: Projects List -->
+<section class="flex flex-col gap-10" data-purpose="projects-container">
+<!-- Project Card 1: Around-You -->
+<article class="relative rounded-[2rem] overflow-hidden glass-panel-2 neon-border-teal group" data-purpose="project-card">
+<div class="card-glow"></div>
+<!-- Thumbnail -->
+<div class="relative w-full aspect-[16/10] bg-[#eef7f6] overflow-hidden">
+<div class="zoom-img absolute inset-0 bg-cover transition-transform duration-700 ease-out" loading="lazy" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCc3OytmsJGrsUVCiBk6NNJiHEDk0A7NCkJ55wr7csKWMqox2fQMmoacIS0_gTf1u-tNgdR0tgyfSsdQKsB9wab9nAKpcbNuA3nTk_482hmY0uZJnGNP_vCl-iH6StV_PQsId11lGUq-IorFXvnDdjuGJrUtPLaEv0-2EpzBJ-V3TY3LH7FWwx_rjnuz10pfz2DiKrwVRv_LWN7BcTioT6UDidnar0fMrv1QqNDCLmSRRtmqv3jtMlHoNqVgeJWRSCxsMkWAyuHfOkQ'); background-position: center 35%;"></div>
+<div class="absolute inset-0 bg-teal-900/10 group-hover:bg-black/20 transition-colors"></div>
+</div>
+<!-- Content -->
+<div class="p-8 flex flex-col gap-5">
+<div>
+<h2 class="text-2xl font-bold project-heading mb-3">Around-You</h2>
+<p class="text-[14px] text-white/70 leading-relaxed">
+                        At Around-You, we facilitate effortless discovery of local services through an intuitive SaaS ecosystem. By leveraging advanced geolocation filtering and verified professional networks, we connect community needs with trusted experts in real-time.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="tech-pill">React</span>
+<span class="tech-pill">Node.js</span>
+<span class="tech-pill">MongoDB</span>
+<span class="tech-pill">Tailwindcss</span>
+<span class="tech-pill">Google Maps API</span>
+</div>
+<div class="pt-2">
+<button class="text-white/40 hover:text-white transition-colors">
+<span class="material-symbols-outlined !text-2xl">open_in_new</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project Card 2: Velvet Pour -->
+<article class="relative rounded-[2rem] overflow-hidden glass-panel-2 neon-border-purple group" data-purpose="project-card">
+<div class="card-glow"></div>
+<!-- Thumbnail -->
+<div class="relative w-full aspect-[16/10] bg-[#0a0c10] overflow-hidden">
+<div class="zoom-img absolute inset-0 bg-cover transition-transform duration-700 ease-out" loading="lazy" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCc3OytmsJGrsUVCiBk6NNJiHEDk0A7NCkJ55wr7csKWMqox2fQMmoacIS0_gTf1u-tNgdR0tgyfSsdQKsB9wab9nAKpcbNuA3nTk_482hmY0uZJnGNP_vCl-iH6StV_PQsId11lGUq-IorFXvnDdjuGJrUtPLaEv0-2EpzBJ-V3TY3LH7FWwx_rjnuz10pfz2DiKrwVRv_LWN7BcTioT6UDidnar0fMrv1QqNDCLmSRRtmqv3jtMlHoNqVgeJWRSCxsMkWAyuHfOkQ'); background-position: center 80%;"></div>
+<div class="absolute inset-0 bg-purple-900/10 group-hover:bg-black/20 transition-colors"></div>
+</div>
+<!-- Content -->
+<div class="p-8 flex flex-col gap-5">
+<div>
+<h2 class="text-2xl font-bold project-heading mb-3">Velvet Pour</h2>
+<p class="text-[14px] text-white/70 leading-relaxed">
+                        Velvet Pour reimagines the digital mixology experience with a luxury-focused landing page. We combine fluid, cinematic animations with high-fidelity visuals to capture the essence of premium hospitality and artisanal craft.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="tech-pill">Next.js</span>
+<span class="tech-pill">Typescript</span>
+<span class="tech-pill">Framer Motion</span>
+<span class="tech-pill">GSAP</span>
+<span class="tech-pill">UI/UX Design</span>
+</div>
+<div class="pt-2">
+<button class="text-white/40 hover:text-white transition-colors">
+<span class="material-symbols-outlined !text-2xl">open_in_new</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- END: Projects List -->
+</main>
+<!-- Simple Tab Bar Style Bottom Nav -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 glass-panel-2 rounded-full px-6 py-3 flex items-center gap-8 border-white/20 z-50">
+<button class="text-blue-400"><span class="material-symbols-outlined">grid_view</span></button>
+<button class="text-white/40"><span class="material-symbols-outlined">person</span></button>
+<button class="text-white/40"><span class="material-symbols-outlined">mail</span></button>
+</nav>
+</body></html>

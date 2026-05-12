@@ -35,7 +35,7 @@ const config = {
   },
   social: {
     twitter: "https://x.com/sachin_akhawat",
-    linkedin: "https://www.linkedin.com/in/sachinsinghakhawat/",
+    linkedin: "https://www.linkedin.com/in/sachin-singh-akhawat-a806a9382?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     instagram: "https://instagram.com/Sachin_singh_akhawat",
     facebook: "https://www.facebook.com/sachinsinghakhawat",
     github: "https://github.com/Sachin9952",
