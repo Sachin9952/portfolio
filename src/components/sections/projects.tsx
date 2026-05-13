@@ -5,6 +5,8 @@ import {
   ResponsiveDialog,
   ResponsiveDialogContent,
   ResponsiveDialogTrigger,
+  ResponsiveDialogTitle,
+  ResponsiveDialogDescription,
 } from "../ui/responsive-dialog";
 import { FloatingDock } from "../ui/floating-dock";
 import { ScrollArea } from "../ui/scroll-area";
@@ -22,19 +24,25 @@ const ProjectsSection = () => {
     <SectionWrapper id="projects" className="max-w-7xl mx-auto min-h-screen pb-20">
       <SectionHeader id="projects" title="Projects" />
       <div className="flex flex-col gap-10 w-full px-5 sm:px-6 md:px-8 lg:px-12 md:grid md:grid-cols-2">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+        {projects.map((project, index) => (
+          <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
     </SectionWrapper>
   );
 };
 
-const ProjectCard = ({ project }: { project: Project }) => {
+const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
   return (
     <div className="flex w-full">
       <ResponsiveDialog>
-        <ResponsiveDialogTrigger className="bg-transparent text-left w-full focus:outline-none">
+        <ResponsiveDialogTrigger 
+          className="bg-transparent text-left w-full focus:outline-none"
+          onClick={(e) => {
+            // Blur the trigger to prevent aria-hidden focus warnings in Radix/Vaul
+            (e.currentTarget as HTMLElement).blur();
+          }}
+        >
           <article className="relative rounded-[2rem] overflow-hidden bg-white/[0.03] backdrop-blur-[16px] border border-white/10 group flex flex-col hover:border-white/20 transition-all duration-300 w-full shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]">
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.03),transparent_70%)]" />
             
@@ -45,6 +53,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 alt={project.title}
                 width={600}
                 height={400}
+                priority={index < 4}
                 style={{ objectPosition: project.thumbnailPosition || "center" }}
               />
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors"></div>
@@ -75,14 +84,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </article>
         </ResponsiveDialogTrigger>
 
-        <ResponsiveDialogContent className="md:max-w-4xl md:h-[85vh] md:!flex md:flex-col md:overflow-hidden md:p-0 md:gap-0">
+        <ResponsiveDialogContent className="flex flex-col h-[85vh] max-h-[85vh] overflow-hidden p-0 gap-0 md:max-w-4xl">
           {/* Sticky header */}
           <div className="shrink-0 border-b border-border bg-background/80 backdrop-blur-sm px-4 md:px-8 py-4 md:py-5">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-4">
               <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 min-w-0 w-full md:w-auto">
-                <h4 className="font-display text-2xl font-bold text-foreground tracking-tight truncate w-full md:w-auto text-left">
+                <ResponsiveDialogTitle className="font-display text-2xl font-bold text-foreground tracking-tight truncate w-full md:w-auto text-left">
                   {project.title}
-                </h4>
+                </ResponsiveDialogTitle>
+                <ResponsiveDialogDescription className="sr-only">
+                  Project details and technical stack for {project.title}
+                </ResponsiveDialogDescription>
                 <span className="shrink-0 text-[10px] md:text-[11px] uppercase tracking-widest text-muted-foreground border border-border rounded-full px-3 py-0.5">
                   {project.category}
                 </span>

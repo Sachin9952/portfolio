@@ -1,4 +1,5 @@
 import React from "react";
+// Triggering HMR to resolve 404 issue caused by build conflict
 import { getBlogPost, getBlogPosts } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import ScrollProgress from "@/components/ui/scroll-progress";

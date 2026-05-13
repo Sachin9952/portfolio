@@ -88,7 +88,7 @@ function ResponsiveDialogContent({
 
   return (
     <DrawerContent className={className}>
-      <ScrollArea className="max-h-[85vh] px-4 pb-4 overflow-y-auto!" data-lenis-prevent>{children}</ScrollArea>
+      {children}
     </DrawerContent>
   );
 }

@@ -1,10 +1,10 @@
 import { Link } from "@/types";
-
+// Triggering HMR to refresh navigation thumbnails
 const links: Link[] = [
   {
     title: 'Home',
     href: '/',
-    thumbnail: '/assets/nav-link-previews/landing.png'
+    thumbnail: '/assets/nav-link-previews/landing-v2.png'
   },
   {
     title: 'About',
