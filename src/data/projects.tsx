@@ -29,6 +29,7 @@ import {
   SiTypescript,
   SiVite,
   SiVuedotjs,
+  SiPostman,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 const BASE_PATH = "/assets/projects-screenshots";
@@ -243,6 +244,18 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <SiRender />,
   },
+  rest: {
+    title: "REST APIs",
+    bg: "black",
+    fg: "white",
+    icon: <SiPostman />,
+  },
+  cloud: {
+    title: "Cloud Deployment",
+    bg: "black",
+    fg: "white",
+    icon: <SiRender />,
+  },
 };
 export type Project = {
   id: string;
@@ -255,8 +268,80 @@ export type Project = {
   github?: string;
   live: string;
   thumbnailPosition?: string;
+  isFlagship?: boolean;
 };
 const projects: Project[] = [
+  {
+    id: "lookshub",
+    category: "Full-Stack SaaS Web Application",
+    title: "LooksHub",
+    src: "/assets/projects-screenshots/lookshub/lookshub-landing.png?v=2",
+    screenshots: ["lookshub-landing.png"],
+    isFlagship: true,
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.framerMotion,
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.mongo,
+        PROJECT_SKILLS.rest,
+        PROJECT_SKILLS.cloud,
+      ],
+    },
+    live: "https://looks-hub.vercel.app",
+    github: "https://github.com/Sachin9952/lookshub",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-xl md:text-2xl text-center">
+            LooksHub is a premium salon booking and business management platform that streamlines appointment booking, improves customer experience, and helps salon businesses manage operations efficiently.
+          </TypographyP>
+          <TypographyP className="font-mono ">
+            LooksHub is a modern full-stack SaaS application built to connect clients with luxury salons and stylists. For customers, it offers an intuitive slot booking flow, stylist preferences, service lookup, and instant WhatsApp booking confirmation. For salon owners and admins, it provides a comprehensive management dashboard to handle bookings, manage staff schedules, set service pricing, track sales performance, and optimize business growth.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="font-mono list-disc pl-6 space-y-2 text-zinc-300 text-sm md:text-base">
+            <li><strong>Online salon appointment booking:</strong> Seamless step-by-step booking flow for selecting services, stylists, date, and time.</li>
+            <li><strong>Real-time slot availability management:</strong> Dynamic scheduling system that prevents double-booking and optimizes stylist load.</li>
+            <li><strong>Barber/Stylist profile system:</strong> Dedicated profile cards displaying stylist expertise, bios, and schedules.</li>
+            <li><strong>Service categorization and pricing:</strong> Elegant menu displays with categorized haircut, styling, and groom treatments.</li>
+            <li><strong>Customer booking lookup system:</strong> Quick lookup system allowing clients to view and manage their appointment status.</li>
+            <li><strong>WhatsApp integration:</strong> Instant automated notifications for booking confirmations and status updates.</li>
+            <li><strong>Admin dashboard:</strong> Visual management suite for salon owners to track bookings, manage staff, and analyze revenue.</li>
+            <li><strong>Responsive mobile-first design:</strong> Pixel-perfect layouts optimized for booking on the go.</li>
+            <li><strong>Modern luxury UI/UX:</strong> Sophisticated aesthetic paired with smooth animations.</li>
+          </ul>
+
+          <TypographyH3 className="my-4 mt-8">My Contributions</TypographyH3>
+          <ul className="font-mono list-disc pl-6 space-y-2 text-zinc-300 text-sm md:text-base">
+            <li>Designed and developed the complete frontend architecture with a premium luxury design system.</li>
+            <li>Implemented the multi-step appointment booking workflow and slot scheduling engine.</li>
+            <li>Developed the responsive, mobile-first stylist selection and scheduling interfaces.</li>
+            <li>Created the customer booking lookup module, improving client retention and self-service.</li>
+            <li>Built reusable UI components using Tailwind CSS and Framer Motion for premium animations.</li>
+            <li>Integrated WhatsApp communication webhooks for immediate client feedback and reminders.</li>
+            <li>Optimized frontend assets and GSAP/Framer Motion animations for maximum fluid performance.</li>
+          </ul>
+
+          <TypographyH3 className="my-4 mt-8">Project Highlights</TypographyH3>
+          <ul className="font-mono list-disc pl-6 space-y-2 text-zinc-300 text-sm md:text-base">
+            <li><strong>Premium luxury brand experience:</strong> Sophisticated dark interface elements paired with gold/bronze color theory.</li>
+            <li><strong>Fluid animations:</strong> Interactive hover states, page transitions, and slide reveals driven by Framer Motion.</li>
+            <li><strong>Scalable SaaS design:</strong> Multi-role schema optimized for multiple stylist/salon management.</li>
+            <li><strong>Mobile-first design:</strong> Fully responsive layouts optimized for mobile bookings.</li>
+            <li><strong>Real-world business solution:</strong> Engineered to tackle actual operational friction in high-end salon scheduling.</li>
+          </ul>
+        </div>
+      );
+    },
+  },
   {
     id: "around-you",
     category: "Local Service Finder Platform",

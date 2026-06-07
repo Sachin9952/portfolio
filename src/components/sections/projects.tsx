@@ -16,6 +16,7 @@ import { motion } from "motion/react";
 
 import projects, { Project } from "@/data/projects";
 import { SectionHeader } from "./section-header";
+import { cn } from "@/lib/utils";
 
 import SectionWrapper from "../ui/section-wrapper";
 
